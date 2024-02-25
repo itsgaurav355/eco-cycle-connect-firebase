@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext'
-
+import { Link } from 'react-router-dom'
 function Filter() {
     const context = useContext(myContext)
     const { mode, searchkey, setSearchkey, filterType, setFilterType,
@@ -19,9 +19,9 @@ function Filter() {
                         <p className="font-medium">
                             Filters
                         </p>
-                        <button className="px-4 py-2 bg-gray-50hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md" style={{ color: mode === 'dark' ? 'white' : '' }}>
+                        <Link to="/store" className="px-4 py-2 bg-gray-50hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md" style={{ color: mode === 'dark' ? 'white' : '' }}>
                             Reset Filter
-                        </button>
+                        </Link>
                     </div>
                     <div>
                         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">

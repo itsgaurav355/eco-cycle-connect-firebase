@@ -149,19 +149,15 @@ const Header = () => {
                     >
                       <li>
                         <Link to="/donate-product" className="dropdown-item text-white" >
-                          E-waste
+                          Donate Product
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item text-white" to=''>
-                          Clothes
+                        <Link to='/donate-history' className="dropdown-item text-white" >
+                          Donated Products
                         </Link>
                       </li>
-                      <li>
-                        <Link className="dropdown-item text-white" to=''>
-                          Plastic Waste
-                        </Link>
-                      </li>
+                     
                     </ul>
                   </div>
                 </div>

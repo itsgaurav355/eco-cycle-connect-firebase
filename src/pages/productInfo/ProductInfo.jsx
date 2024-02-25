@@ -57,7 +57,7 @@ useEffect(() => {
     width: 400,
     height: 600,
     zoomWidth: 600,
-    img: `${products.imageUrl}`,
+    img: `₹{products.imageUrl}`,
   };
   const [orderedProduct, setOrderedProduct] = useState(true);
   const copyToClipboard = (text) => {
@@ -122,7 +122,7 @@ useEffect(() => {
                   </h3>
                 </div>
                 <div className="border-bottom py-3">
-                  <p className="price">${products.price}</p>
+                  <p className="price">₹{products.price}</p>
                   <div className="d-flex align-items-center gap-10">
                     <ReactStars
                       count={5}

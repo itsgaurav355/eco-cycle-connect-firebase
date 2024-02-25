@@ -92,9 +92,9 @@ function myState(props) {
         try {
             const productRef = collection(fireDB, 'donate-product');
             await addDoc(productRef, donateproducts)
-            toast.success("Add product successfully");
+            toast.success("Added product successfully");
             setTimeout(() => {
-                window.location.href = '/allproducts'
+                window.location.href = '/'
             }, 800);
             setLoading(false)
         } catch (error) {
@@ -106,6 +106,27 @@ function myState(props) {
 
     const [donateproduct, setDonateProduct] = useState([]);
 
+    const getDonatedProduct = async () => {
+        setLoading(true)
+        try {
+            const result = await getDocs(collection(fireDB, "donate-product"))
+            const ordersArray = [];
+            result.forEach((doc) => {
+                ordersArray.push(doc.data());
+                setLoading(false)
+            });
+            setDonate(ordersArray);
+            console.log(ordersArray)
+            setLoading(false);
+        } catch (error) {
+            console.log(error)
+            setLoading(false)
+        }
+    }
+    useEffect(() => {
+        getDonatedProduct();
+    }, []);
+ 
     const getProductData = async () => {
 
         setLoading(true)
@@ -232,9 +253,8 @@ function myState(props) {
             mode, toggleMode, loading, setLoading,
             products, setProducts, addProduct, product,
             edithandle, updateProduct, deleteProduct, order,
-            user, searchkey, setSearchkey,filterType,setFilterType,
-            filterPrice,setFilterPrice , donateproducts , setDonateProducts ,donatingProduct
-        }}>
+            user, searchkey, setSearchkey,filterType,setFilterType,getDonatedProduct,
+            filterPrice,setFilterPrice , donateproducts , setDonateProducts ,donatingProduct,donateproduct,setDonateProduct        }}>
             {props.children}
         </MyContext.Provider>
     )

@@ -45,7 +45,7 @@ const Checkout = () => {
 
   const buyNow = async () => {
     if (name === "" || address == "" || pincode == "" || phoneNumber == "") {
-      return toast.error("All fields are required", {
+      return {
         position: "top-center",
         autoClose: 1000,
         hideProgressBar: false,
@@ -54,7 +54,7 @@ const Checkout = () => {
         draggable: true,
         progress: undefined,
         theme: "colored",
-      });
+      };
     }
 
     const addressInfo = {
@@ -158,7 +158,6 @@ const Checkout = () => {
                   </p>
                   <h4 className="mb-3">Shipping Details</h4>
                   <form
-                    action={buyNow()}
                     className="d-flex gap-15  flex-wrap justify-content-between"
                   >
                     <div className="w-100">
@@ -239,11 +238,12 @@ const Checkout = () => {
                         <Link to="/cart" className="text-dark">
                           <BiArrowBack className="me-2" /> Return to Cart
                         </Link>
-                        {/* <button
+                        <button
                           className="button"
+                          onSubmit={buyNow()}
                         >
                           Place Order
-                        </button> */}
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -272,23 +272,23 @@ const Checkout = () => {
                       </div>
                     </div>
                     <div className="flex-grow-1">
-                      <h5 className="total">${totalAmount}</h5>
+                      <h5 className="total">₹{totalAmount}</h5>
                     </div>
                   </div>
                 </div>
                 <div className="border-bottom py-4">
                   <div className="d-flex justify-content-between align-items-center">
                     <p className="total">Sub Total </p>
-                    <p className="total-price">${totalAmount}</p>
+                    <p className="total-price">₹{totalAmount}</p>
                   </div>
                   <div className="d-flex justify-content-between align-items-center">
                     <p className="mb-0 total">Shipping</p>
-                    <p className="mb-0 total-price">${shipping}</p>
+                    <p className="mb-0 total-price">₹{shipping}</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                   <h4 className="total">Total</h4>
-                  <h5 className="total-price">${grandTotal}</h5>
+                  <h5 className="total-price">₹{grandTotal}</h5>
                 </div>
               </div>
             </div>

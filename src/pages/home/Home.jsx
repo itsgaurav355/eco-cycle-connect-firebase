@@ -63,10 +63,10 @@ function Home() {
               <div className="famous-card position-relative">
                 <Link to={"/store"}><img src="images/card-1.jpg" className="img-fluid" alt="" /></Link>
                 <div className="famous-content position-absolute">
-                  <h5 className="text-dark">Big Screen</h5>
-                  <h6 className="text-dark">Smart Watch Series 7</h6>
+                  <h5 className="text-dark">Home</h5>
+                  <h6 className="text-dark">Alovera Pot</h6>
                   <p className="text-dark">
-                    From $399 or $16.62/mo. for 24 mo.*
+                    Starting From $3 only/-
                   </p>
                 </div>
               </div>
@@ -81,9 +81,9 @@ function Home() {
                 />
                 </Link>
                 <div className="famous-content position-absolute">
-                  <h5 className="text-dark">Studio Display</h5>
-                  <h6 className="text-dark">600 nits of brightness</h6>
-                  <p className="text-dark">27-inch 5K Retina display</p>
+                  <h5 className="text-dark">Recycled Cups</h5>
+                  <h6 className="text-dark">Set of 4 cups</h6>
+                  <p className="text-dark">For home use ,<br /> professional looking cups <br /> $7 only/-</p>
                 </div>
               </div>
             </div>
@@ -96,10 +96,10 @@ function Home() {
                   alt="famous"
                 /></Link> 
                 <div className="famous-content position-absolute">
-                  <h5 className="text-dark">SmartPhones</h5>
-                  <h6 className="text-dark">SmartPhone 15 Pro</h6>
+                  <h5 className="text-dark">Home Accesories</h5>
+                  <h6 className="text-dark">Set of plate</h6>
                   <p className="text-dark">
-                    Now in Green From $999.00 or $41.62/mo. for 24 mo. Footnote*
+                    Now in Green From $9.00 or $41.62/mo. for 24 mo. Footnote*
                   </p>
                 </div>
               </div>
@@ -112,10 +112,10 @@ function Home() {
                   alt="famous" 
                 /></Link>
                 <div className="famous-content position-absolute">
-                  <h5 className="text-dark">Home Speakers</h5>
-                  <h6 className="text-dark">Room -filling Sound.</h6>
+                  <h5 className="text-dark">Home Bags</h5>
+                  <h6 className="text-dark">Recycled Sacs</h6>
                   <p className="text-dark">
-                    From $699 or $116.58/mo. for 12 mo.*
+                     $5.00 
                   </p>
                 </div>
               </div>
